@@ -3,12 +3,12 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    color-scheme: dark;
+    color-scheme: light;
   }
   body {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #080B11;
-    color: #F1F5F9;
+    background-color: #FFFFFF;
+    color: #0F172A;
     overflow-x: hidden;
   }
 }
@@ -21,38 +21,44 @@
   font-family: 'Caveat', cursive;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar for light theme */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #080B11;
+  background: #F8FAFC;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1E293B;
+  background: #CBD5E1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #D97706;
+  background: #2563EB;
 }
 
-/* Glassmorphism helpers */
+/* Glassmorphism helpers for white theme */
 .glass-panel {
-  background: rgba(15, 23, 42, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(226, 232, 240, 0.9);
 }
 
-.glass-panel-gold {
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(15, 23, 42, 0.8) 100%);
+.glass-panel-blue {
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(245, 158, 11, 0.2);
+  border: 1px solid rgba(191, 219, 254, 0.8);
+}
+
+.blue-gradient-text {
+  background: linear-gradient(135deg, #1E40AF 0%, #2563EB 50%, #0284C7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .gold-gradient-text {
-  background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 50%, #D97706 100%);
+  background: linear-gradient(135deg, #D97706 0%, #B45309 50%, #92400E 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

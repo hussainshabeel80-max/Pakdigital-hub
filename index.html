@@ -2,6 +2,48 @@
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      // Defensive shim for environments where window.fetch has only a getter
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          var customFetch = originalFetch;
+          try {
+            Object.defineProperty(window, 'fetch', {
+              get: function() {
+                return customFetch || originalFetch;
+              },
+              set: function(val) {
+                customFetch = val;
+              },
+              configurable: true,
+              enumerable: true
+            });
+          } catch (e1) {
+            try {
+              Object.defineProperty(Window.prototype, 'fetch', {
+                get: function() {
+                  return customFetch || originalFetch;
+                },
+                set: function(val) {
+                  customFetch = val;
+                },
+                configurable: true,
+                enumerable: true
+              });
+            } catch (e2) {}
+          }
+
+          window.addEventListener('error', function(e) {
+            if (e && e.message && typeof e.message === 'string' && e.message.indexOf('fetch') !== -1 && e.message.indexOf('getter') !== -1) {
+              e.preventDefault();
+              e.stopImmediatePropagation();
+              return true;
+            }
+          }, true);
+        } catch (err) {}
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PakDigital Hub | Digital Marketing & E-commerce Growth Agency</title>
     <meta name="description" content="PakDigital Hub provides SEO, Google Business Profile, Meta Ads, Google Ads and Amazon services to help businesses improve online visibility and generate more opportunities." />
@@ -33,7 +75,7 @@
     }
     </script>
   </head>
-  <body class="bg-[#080B11] text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-black">
+  <body class="bg-white text-slate-900 font-sans antialiased selection:bg-blue-600 selection:text-white">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

@@ -9,7 +9,7 @@ export const TrustStrip: React.FC = () => {
       sub: 'Search Visibility & Rankings',
       icon: Search,
       href: '#services-seo',
-      color: 'text-blue-400'
+      color: 'text-blue-600 bg-blue-50'
     },
     {
       id: 'gbp',
@@ -17,7 +17,7 @@ export const TrustStrip: React.FC = () => {
       sub: 'Local Maps & Geo Discovery',
       icon: MapPin,
       href: '#services-gbp',
-      color: 'text-emerald-400'
+      color: 'text-emerald-600 bg-emerald-50'
     },
     {
       id: 'meta-ads',
@@ -25,7 +25,7 @@ export const TrustStrip: React.FC = () => {
       sub: 'Facebook & Instagram Funnels',
       icon: Share2,
       href: '#services-meta-ads',
-      color: 'text-indigo-400'
+      color: 'text-indigo-600 bg-indigo-50'
     },
     {
       id: 'google-ads',
@@ -33,7 +33,7 @@ export const TrustStrip: React.FC = () => {
       sub: 'Commercial PPC & Phone Calls',
       icon: Target,
       href: '#services-google-ads',
-      color: 'text-amber-400'
+      color: 'text-blue-600 bg-blue-50'
     },
     {
       id: 'amazon',
@@ -41,22 +41,22 @@ export const TrustStrip: React.FC = () => {
       sub: 'Feedback Strategy & Credibility',
       icon: ShoppingBag,
       href: '#services-amazon',
-      color: 'text-amber-300'
+      color: 'text-amber-600 bg-amber-50'
     }
   ];
 
   return (
-    <section className="relative py-8 bg-[#0B0F17]/95 border-y border-slate-800/80">
+    <section className="relative py-8 bg-slate-50/90 border-y border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
           {/* Section Kicker */}
           <div className="shrink-0 flex items-center gap-3">
-            <span className="w-1.5 h-6 rounded-full bg-amber-400" />
+            <span className="w-1.5 h-6 rounded-full bg-blue-600" />
             <div>
-              <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-amber-400">
+              <p className="text-[11px] font-extrabold tracking-[0.2em] uppercase text-blue-700">
                 Core Capabilities
               </p>
-              <h2 className="text-sm sm:text-base font-bold text-white uppercase tracking-wider">
+              <h2 className="text-sm sm:text-base font-bold text-slate-900 uppercase tracking-wider">
                 OUR DIGITAL GROWTH SERVICES
               </h2>
             </div>
@@ -70,18 +70,18 @@ export const TrustStrip: React.FC = () => {
                 <a
                   key={service.id}
                   href={service.href}
-                  className="group flex flex-col p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-amber-400/40 hover:bg-slate-800/60 transition-all duration-200"
+                  className="group flex flex-col p-3 sm:p-3.5 rounded-xl bg-white border border-slate-200 hover:border-blue-400 hover:shadow-md hover:shadow-blue-500/10 transition-all duration-200"
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <div className={`p-1.5 rounded-lg bg-slate-800/80 ${service.color}`}>
+                    <div className={`p-1.5 rounded-lg ${service.color}`}>
                       <Icon className="w-4 h-4" />
                     </div>
-                    <ArrowRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-amber-400 group-hover:translate-x-0.5 transition-all" />
+                    <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-0.5 transition-all" />
                   </div>
-                  <span className="text-xs sm:text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">
+                  <span className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                     {service.title}
                   </span>
-                  <span className="text-[10px] sm:text-[11px] text-slate-400 line-clamp-1 mt-0.5">
+                  <span className="text-[10px] sm:text-[11px] text-slate-500 line-clamp-1 mt-0.5 font-medium">
                     {service.sub}
                   </span>
                 </a>

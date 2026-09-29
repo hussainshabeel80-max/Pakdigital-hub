@@ -25,7 +25,7 @@ import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#080B11] text-slate-100 flex flex-col font-sans selection:bg-amber-400 selection:text-slate-950">
+    <div className="min-h-screen bg-white text-slate-900 flex flex-col font-sans selection:bg-blue-600 selection:text-white">
       {/* 1. Sticky Navigation */}
       <Navbar />
 

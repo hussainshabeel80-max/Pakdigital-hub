@@ -13,29 +13,29 @@ export const ServicesSection: React.FC = () => {
 
   const colorMap: Record<string, { iconBg: string; border: string; accent: string }> = {
     seo: {
-      iconBg: 'bg-blue-500/10 text-blue-400',
-      border: 'hover:border-blue-500/40',
-      accent: 'text-blue-400'
+      iconBg: 'bg-blue-50 text-blue-600',
+      border: 'hover:border-blue-400',
+      accent: 'text-blue-600'
     },
     gbp: {
-      iconBg: 'bg-emerald-500/10 text-emerald-400',
-      border: 'hover:border-emerald-500/40',
-      accent: 'text-emerald-400'
+      iconBg: 'bg-emerald-50 text-emerald-600',
+      border: 'hover:border-emerald-400',
+      accent: 'text-emerald-600'
     },
     'meta-ads': {
-      iconBg: 'bg-indigo-500/10 text-indigo-400',
-      border: 'hover:border-indigo-500/40',
-      accent: 'text-indigo-400'
+      iconBg: 'bg-indigo-50 text-indigo-600',
+      border: 'hover:border-indigo-400',
+      accent: 'text-indigo-600'
     },
     'google-ads': {
-      iconBg: 'bg-amber-500/10 text-amber-400',
-      border: 'hover:border-amber-500/40',
-      accent: 'text-amber-400'
+      iconBg: 'bg-blue-50 text-blue-700',
+      border: 'hover:border-blue-500',
+      accent: 'text-blue-700'
     },
     amazon: {
-      iconBg: 'bg-amber-400/10 text-amber-300',
-      border: 'hover:border-amber-400/40',
-      accent: 'text-amber-300'
+      iconBg: 'bg-amber-50 text-amber-600',
+      border: 'hover:border-amber-400',
+      accent: 'text-amber-600'
     }
   };
 
@@ -45,17 +45,17 @@ export const ServicesSection: React.FC = () => {
   };
 
   return (
-    <section id="services" className="py-20 lg:py-28 bg-[#0B0F17]/70 relative border-t border-slate-800/80">
+    <section id="services" className="py-20 lg:py-28 bg-slate-50/60 relative border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
-          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amber-400">
+          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-700">
             <span>Core Agency Offerings</span>
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight text-balance">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight text-balance">
             Our Digital Marketing Services
           </h2>
-          <p className="text-base text-slate-400 leading-relaxed text-balance">
+          <p className="text-base text-slate-600 leading-relaxed text-balance">
             Targeted strategies designed to increase online discoverability, generate qualified commercial leads, and establish long-term digital authority for your business.
           </p>
         </div>
@@ -65,9 +65,9 @@ export const ServicesSection: React.FC = () => {
           {SERVICES_DATA.map((service, index) => {
             const IconComponent = iconMap[service.id] || Search;
             const style = colorMap[service.id] || {
-              iconBg: 'bg-amber-500/10 text-amber-400',
-              border: 'hover:border-amber-500/40',
-              accent: 'text-amber-400'
+              iconBg: 'bg-blue-50 text-blue-600',
+              border: 'hover:border-blue-400',
+              accent: 'text-blue-600'
             };
 
             const isLastWide = index === 3 || index === 4;
@@ -75,7 +75,7 @@ export const ServicesSection: React.FC = () => {
             return (
               <div
                 key={service.id}
-                className={`group flex flex-col justify-between rounded-2xl p-6 sm:p-7 bg-slate-900/60 border border-slate-800 transition-all duration-300 ${style.border} hover:bg-slate-900/90 hover:shadow-xl hover:shadow-black/50 ${
+                className={`group flex flex-col justify-between rounded-2xl p-6 sm:p-7 bg-white border border-slate-200/90 transition-all duration-300 ${style.border} hover:shadow-xl hover:shadow-blue-500/10 ${
                   isLastWide && index === 3 ? 'lg:col-span-1' : ''
                 }`}
               >
@@ -85,29 +85,29 @@ export const ServicesSection: React.FC = () => {
                     <div className={`p-3 rounded-xl ${style.iconBg}`}>
                       <IconComponent className="w-6 h-6" />
                     </div>
-                    <span className="text-[11px] font-semibold tracking-wider text-slate-400 uppercase">
+                    <span className="text-[11px] font-bold tracking-wider text-blue-700 uppercase">
                       {service.badge}
                     </span>
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="font-display text-xl sm:text-2xl font-bold text-white group-hover:text-amber-300 transition-colors mb-2">
+                  <h3 className="font-display text-xl sm:text-2xl font-bold text-slate-950 group-hover:text-blue-600 transition-colors mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-slate-400 leading-relaxed mb-6">
+                  <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
                     {service.shortDesc}
                   </p>
 
                   {/* Scope Checklist (10 or 8 items) */}
-                  <div className="pt-4 border-t border-slate-800/80">
-                    <p className="text-xs font-bold uppercase tracking-wider text-slate-300 mb-3">
+                  <div className="pt-4 border-t border-slate-100">
+                    <p className="text-xs font-bold uppercase tracking-wider text-slate-900 mb-3">
                       Included Capabilities:
                     </p>
-                    <ul className="grid grid-cols-2 gap-2 text-xs text-slate-300">
+                    <ul className="grid grid-cols-2 gap-2 text-xs text-slate-700">
                       {service.items.map((item, idx) => (
                         <li key={idx} className="flex items-center gap-1.5">
-                          <Check className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                          <span className="truncate">{item}</span>
+                          <Check className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+                          <span className="truncate font-medium">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -115,22 +115,22 @@ export const ServicesSection: React.FC = () => {
                 </div>
 
                 {/* Footer Action Strip */}
-                <div className="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between gap-3">
+                <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between gap-3">
                   <div>
                     <span className="text-[10px] uppercase text-slate-500 block font-semibold">Engagement</span>
-                    <span className="text-xs font-bold text-amber-400">Tailored Scope</span>
+                    <span className="text-xs font-bold text-blue-700">Tailored Scope</span>
                   </div>
 
                   <div className="flex items-center gap-2">
                     <a
                       href={`#services-${service.id}`}
-                      className="text-xs font-semibold text-slate-300 hover:text-white px-2.5 py-1.5 rounded-lg border border-slate-800 hover:bg-slate-800 transition-colors"
+                      className="text-xs font-semibold text-slate-700 hover:text-blue-700 px-2.5 py-1.5 rounded-lg border border-slate-200 hover:bg-blue-50/60 hover:border-blue-300 transition-colors"
                     >
                       Details
                     </a>
                     <button
                       onClick={() => handleServiceInquiry(service.title)}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-slate-950 bg-amber-400 hover:bg-amber-300 rounded-lg transition-colors whitespace-nowrap"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-xs transition-colors whitespace-nowrap"
                     >
                       <span>{service.ctaText}</span>
                       <ArrowRight className="w-3.5 h-3.5" />
