@@ -1,0 +1,6 @@
+{
+  "name": "PakDigital Hub",
+  "description": "PakDigital Hub provides SEO, Google Business Profile, Meta Ads, Google Ads and Amazon services to help businesses improve online visibility and generate more opportunities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
