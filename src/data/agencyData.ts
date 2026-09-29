@@ -51,7 +51,7 @@ export const AGENCY_CONFIG = {
   email: "pakdigitalhubagency@gmail.com",
   facebookUrl: "https://www.facebook.com/profile.php?id=61594877632310",
   whatsappDefaultMsg: "Hello PakDigital Hub, I would like to schedule a free digital marketing consultation for my business.",
-  founderImage: "/src/assets/images/pakdigital_founder_hero_1790612429779.jpg",
+  founderImage: "/src/assets/images/founder_photo_clean_1790718372009.jpg",
   realEstateImage: "/src/assets/images/real_estate_leads_1790612343116.jpg",
   analyticsImage: "/src/assets/images/ecommerce_growth_1790612367540.jpg",
   agencyCollabImage: "/src/assets/images/agency_team_collaboration_1790612443705.jpg"

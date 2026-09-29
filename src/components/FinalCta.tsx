@@ -39,10 +39,10 @@ export const FinalCta: React.FC = () => {
 
           <a
             href={`tel:${AGENCY_CONFIG.phone.replace(/\s+/g, '')}`}
-            className="inline-flex items-center gap-2.5 px-8 py-4 text-sm sm:text-base font-semibold text-white bg-slate-900 border border-slate-700 hover:border-amber-400/50 hover:bg-slate-800 rounded-xl transition-all"
+            className="inline-flex items-center gap-2.5 px-8 py-4 text-sm sm:text-base font-semibold text-white bg-slate-900 border border-slate-700 hover:border-amber-400/50 hover:bg-slate-800 rounded-xl transition-all whitespace-nowrap shrink-0"
           >
-            <Phone className="w-5 h-5 text-amber-400" />
-            <span>Call {AGENCY_CONFIG.phone}</span>
+            <Phone className="w-5 h-5 text-amber-400 shrink-0" />
+            <span className="whitespace-nowrap">Call {AGENCY_CONFIG.phone}</span>
           </a>
         </div>
 

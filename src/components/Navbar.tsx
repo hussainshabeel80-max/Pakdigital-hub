@@ -68,21 +68,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
           </nav>
 
           {/* Zone 3: Primary Actions */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <a
               href={`tel:${AGENCY_CONFIG.phone.replace(/\s+/g, '')}`}
-              className="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold text-slate-300 hover:text-white px-2.5 py-2 rounded-lg transition-colors border border-slate-800 bg-slate-900/60"
+              className="hidden md:inline-flex items-center gap-1.5 text-xs font-semibold text-slate-200 hover:text-white px-2.5 sm:px-3 py-2 rounded-lg transition-colors border border-slate-800 bg-slate-900/80 hover:bg-slate-800 whitespace-nowrap shrink-0"
               title="Call PakDigital Hub"
             >
-              <Phone className="w-3.5 h-3.5 text-amber-400" />
-              <span>{AGENCY_CONFIG.phone}</span>
+              <Phone className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+              <span className="whitespace-nowrap font-medium tracking-wide">{AGENCY_CONFIG.phone}</span>
             </a>
 
             <button
               onClick={handleWhatsAppClick}
-              className="inline-flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 rounded-lg hover:shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:brightness-105 active:scale-[0.98] transition-all whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 text-xs sm:text-sm font-semibold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 rounded-lg hover:shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:brightness-105 active:scale-[0.98] transition-all whitespace-nowrap shrink-0"
             >
-              <MessageSquare className="w-4 h-4 fill-current" />
+              <MessageSquare className="w-4 h-4 fill-current shrink-0" />
               <span>Get a Free Consultation</span>
             </button>
 
